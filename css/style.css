@@ -17,6 +17,9 @@
     --right-bg: rgba(36, 151, 42, 0.7);
     --color-play: rgba(1, 112, 219, 1);
     --color-xbox: rgba(36, 151, 42, 1);
+    --color-play-dark: rgba(0, 30, 100, 1);
+    --blacK: #000;
+    --white: #fff;
     --hover-width: 75%;
     --other-width: 25%;
 }
@@ -70,6 +73,24 @@ h1{
     font-size: 1.7rem;
     width: 20rem;
     padding: 1.5rem;
+}
+
+.btn-two{
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.9rem 3rem;
+    border-radius: .5rem;
+    color:#fff;
+    background:var(--color-play);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn-two:hover{
+    color: #fff;
+    background: rgb(9, 136, 255);
 }
 
 .heading-text h2{
@@ -300,7 +321,73 @@ h1{
 }
 
 
+/**Destacados**/
 
+.destacados-slider .box{
+    margin:2rem 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+
+.destacados-slider .box .image{
+    padding:1rem;
+    background: #fff;
+}
+
+.destacados-slider .box:hover .image{
+    transform: translateY(5rem);
+}
+
+.destacados-slider .box .image img{
+    height: 28rem;
+}
+
+.destacados-slider .box .icons{
+    position: absolute;
+    top:0; left:0; right: 0;
+    background: var(--color-play-dark);
+    z-index: 1;
+    transform: translateY(-105%);
+}
+
+.destacados-slider .box:hover .icons{
+    transform: translateY(0%);
+}
+
+.destacados-slider .box .icons a{
+    color:var(--white);
+    font-size: 2.2rem;
+    padding:1.3rem 1.5rem;
+    text-decoration: none;
+}
+
+.destacados-slider .box .icons a:hover{
+    color:var(--color-play);
+}
+
+.destacados-slider .box .content{
+    background:var(--color-play-dark);
+    padding:1.5rem;
+}
+
+.destacados-slider .box .content h3{
+    font-size: 2rem;
+    color:var(--white);
+}
+
+.destacados-slider .box .content .price{
+    font-size: 2.2rem;
+    color:var(--white);
+    padding-top: 1rem;
+}
+
+.destacados-slider .box .content .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
 
 
 
