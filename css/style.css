@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&display=swap");
+
+*{
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 65%;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+:root{
+    --left-bg: rgba(1, 112, 219, 0.7);
+    --right-bg: rgba(36, 151, 42, 0.7);
+    --color-play: rgba(1, 112, 219, 1);
+    --color-xbox: rgba(36, 151, 42, 1);
+    --hover-width: 75%;
+    --other-width: 25%;
+}
+
+body{
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.body-play {
+    background: url(../img/bg-play.webp);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+    margin: 0;
+    padding:.5rem 0 1.3rem 0;
+}
+
+.split h2{
+    font-size: 5rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    white-space: nowrap;
+}
+
+.btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.4rem;
+    font-size: 1.7rem;
+    width: 20rem;
+    padding: 1.5rem;
+}
+
+.heading-text h2{
+    font-size: 3.5rem;
+    text-align: center;
+    color: #fff;
+    margin: 2rem;
+}
+
+.cruz{
+    color: var(--color-xbox);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.circle{
+    color: rgb(223, 23, 23);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Index */
+.left .btn:hover{
+    border: var(--color-play);
+    background: var(--color-play);
+}
+
+.right .btn:hover{
+    border: var(--color-xbox);
+    background: var(--color-xbox);
+}
+
+.heading{
+    background: url(https://fondosmil.com/fondo/49754.jpg);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left{
+    left: 0;
+    background: url(https://wallpapercave.com/wp/wp6560185.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg);
+}
+
+.split.right{
+    right: 0;
+    background: url(https://as01.epimg.net/meristation/imagenes/2019/12/13/noticias/1576234912_462797_1576235071_noticia_normal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg);
+}
+
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+.split.right, .right, .split.left, .left {
+    transition: 4s;
+}
+
+/********/
+
+
+.sitio-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: url(https://fondosmil.com/fondo/49754.jpg);
+    padding: 1rem 9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-evenly;
+    gap: 0.4rem;
+}
+
+.sitio-header .icono {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #fff;
+    gap: 1px;
+}
+
+.sitio-header .icono:hover {
+    color: var(--color-play);
+}
+
+.sitio-header #menu-btn {
+    display: none;
+}
+
+.sitio-header .navbar a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 2rem;
+    text-decoration: none;
+}
+
+.sitio-header .navbar a:nth-child(1){
+    margin-left: 0;
+}
+
+.sitio-header .navbar a:nth-last-child(1){
+    margin-right: 0;
+}
+
+.sitio-header .navbar a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: var(--color-play);
+}
+
+.sitio-header .navbar .espacio {
+    display: inline-block;
+    width: 16rem;
+}
+
+.sitio-header .logo {
+    position: absolute;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    top: 2.4rem;
+    left: 38%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.sitio-header .logo span{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-play);
+}
+
+
+.sitio-header .logo img {
+    width: 15rem;
+}
+
+.sitio-header .busqueda-form {
+    height: 7rem;
+    padding: 0 2rem;
+    border-top: 0.2rem solid var(--color-play);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #000;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.sitio-header .busqueda-form.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.sitio-header .busqueda-form input {
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.sitio-header .fa-times {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.carousel{
+    margin-top: 5rem;
+}
+
+
+
+
+
+
+/*Media query*/
+
+@media (max-width: 1074px) {
+    *{
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 970px) {
+    .sitio-header {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        gap: 2rem;
+        padding: 2rem 9%;
+    }
+    .sitio-header .logo {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        left: 1rem;
+        top: 0;
+    }
+    .sitio-header #menu-btn {
+        display: inline-block;
+    }
+    .sitio-header .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 138, 0.651);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .sitio-header .navbar.active {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .sitio-header .navbar a {
+        margin: 2rem 1rem;
+    }
+
+    .sitio-header .navbar a:nth-child(1){
+        margin-left: 1rem;
+    }
+    .sitio-header .navbar .espacio {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    *{
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width: 540px) {
+    *{
+        font-size: 40%;
+    }
+
+    h2{
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+
+    .btn{
+        top: 33%;
+    }
+
+    .split.left{
+        background-position: center;
+    }
+
+    .split.right{
+        background-position: center;
+    }
+
+    .hover-left .left {
+        width: 50%;
+    }
+    
+    .hover-left .right {
+        width:50%;
+    }
+    
+    .hover-right .right {
+        width: 50%;
+    }
+    
+    .hover-right .left {
+        width: 50%;
+    }
+
+    .carousel{
+        margin-top: 6rem;
+    }
+}
