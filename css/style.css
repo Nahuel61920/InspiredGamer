@@ -423,10 +423,11 @@ h1{
 
 /*New product*/
 
+.new-slider{
+    margin: 4rem 0;
+}
 
 .new-slider .swiper-wrapper .box{
-    display: flex;
-    flex-direction: column;
     text-align: center;
     border-radius: 2rem;
 }
@@ -436,7 +437,13 @@ h1{
     margin: 1rem 0;
 }
 
-.box:hover .img-new{
+.img-dig{
+    height: 24rem;
+    margin: 1rem 0;
+}
+
+.box:hover .img-new,
+.box:hover .img-dig{
     transform: scale(.9);
 }
 
