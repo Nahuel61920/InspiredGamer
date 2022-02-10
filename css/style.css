@@ -542,12 +542,13 @@ h1{
             -ms-flex-pack: end;
                 justify-content: flex-end;
         gap: 2rem;
-        padding: 2rem 9%;
+        padding: 2rem 7%;
     }
     .sitio-header .logo {
+        padding: 0 7%;
         -webkit-transform: translateX(0);
                 transform: translateX(0);
-        left: 1rem;
+        left: 0;
         top: 0;
     }
     .sitio-header #menu-btn {
@@ -647,6 +648,16 @@ h1{
     
     .hover-right .left {
         width: 50%;
+    }
+
+    .sitio-header .logo {
+        left: 0;
+        top: .9rem;
+        font-size: 3rem;
+    }
+
+    .sitio-header .logo span{
+        font-size: 3rem;
     }
 
     .carousel{
