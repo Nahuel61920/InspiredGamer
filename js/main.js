@@ -25,6 +25,8 @@ window.onscroll = () =>{
     navbar.classList.remove('active');
 }
 
+ScrollReveal().reveal('.headline');
+
 
 var swiper = new Swiper(".destacados-slider", {
     spaceBetween: 10,

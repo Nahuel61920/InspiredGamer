@@ -75,10 +75,29 @@ h1{
     padding: 1.5rem;
 }
 
+.btn-one{
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.8rem 1rem;
+    border-radius: .5rem;
+    color:var(--color-play);
+    border: var(--color-play) solid 0.2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-one:hover{
+    color: var(--white);
+    background: var(--color-play);
+}
+
 .btn-two{
     margin-top: 1rem;
     display:inline-block;
-    padding:.9rem 3rem;
+    padding:.9rem 1rem;
     border-radius: .5rem;
     color:#fff;
     background:var(--color-play);
@@ -86,6 +105,7 @@ h1{
     cursor: pointer;
     font-weight: 500;
     text-decoration: none;
+    text-align: center;
 }
 
 .btn-two:hover{
@@ -465,6 +485,25 @@ h1{
     color:var(--white);
     padding-top: .6rem;
 }
+
+/*Joy off*/
+
+.joy-off{
+    grid-gap: 5rem;
+}
+
+.joy-off .img-off img{
+    width: 38rem;
+}
+
+.title-joy{
+    text-align: end;
+    padding-right: 5rem;
+}
+
+.bottom a{
+    margin: .5rem;
+}
 /*Media query*/
 
 @media (max-width: 1074px) {
@@ -522,6 +561,14 @@ h1{
         flex-direction: column;
     }
 
+    .off-slider .img-off{
+        text-align: center;
+    }
+
+    .joy-off .title-joy{
+        text-align: start;
+    }
+
 }
 
 @media (max-width: 720px) {
@@ -529,6 +576,14 @@ h1{
         font-size: 50%;
     }
 
+    .joy-off .img-off img{
+        width: 30rem;
+    }
+
+    .title-joy{
+        text-align: end;
+        padding-right: 2rem;
+    }
 
 }
 
