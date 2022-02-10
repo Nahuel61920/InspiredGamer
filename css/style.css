@@ -41,6 +41,10 @@ section{
     padding: 2rem 7%;
 }
 
+article{
+    padding: 2rem 7%;
+}
+
 h1{
     text-align: center;
     font-size: 4rem;
@@ -569,7 +573,7 @@ h1{
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    background: var(--white);
+    background: var(--color-play);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -582,7 +586,7 @@ h1{
 .blog-site .blog-container .blog-box .imagen .iconos a i {
     padding-right: .5rem;
     font-size: 1.5rem;
-    color: var(--color-play);
+    color: var(--white);
 }
 
 .blog-site .blog-container .blog-box .imagen img {
@@ -608,6 +612,66 @@ h1{
     color: #aaa;
     padding: 1.5rem 0;
 }
+
+/*Accesorio off*/
+
+.acc-off .title-off h2{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+
+.acc-off .title-off p{
+    padding-bottom: 1rem;
+}
+
+/*Contactos*/
+
+.contacto-container{
+    gap: 2rem;
+}
+
+.contacto-container div{
+    background: var(--color-play-dark);
+    border-radius: 2rem;
+}
+
+.contacto-container div h2{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.contacto-container div .iconos-red {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contacto-container div .iconos-red a i{
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.contacto-container div .contact-inf {
+    display: block;
+    color: var(--white);
+}
+
+.contacto-container div .contact-inf h3{
+    padding: .3rem;
+}
+
+.contacto-container div .sub .box{
+    width: 80%;
+    margin: .7rem 0;
+    padding:1rem 1.2rem;
+    font-size: 1.6rem;
+    color:var(--black);
+    border-radius: .5rem;
+    text-transform: none;
+    background: var(--white);
+}
+
+
 
 
 /*Media query*/
