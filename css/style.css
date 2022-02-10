@@ -527,6 +527,88 @@ h1{
     color: #fff;
 }
 
+/*Blog*/
+
+.blog-site .heading-text h2{
+    margin:0 2rem 2rem 2rem;
+}
+
+.blog-site .blog-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap: 2rem;
+}
+
+.blog-site .blog-container .blog-box {
+    position: relative;
+    background: var(--color-play-dark);
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.blog-site .blog-container .blog-box:hover .imagen img {
+    transform: scale(1.1);
+    
+}
+
+.blog-site .blog-container .blog-box:hover .imagen .iconos {
+    transform: translateY(0);
+}
+
+.blog-site .blog-container .blog-box .imagen {
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 2rem;
+}
+
+.blog-site .blog-container .blog-box .imagen .iconos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background: var(--white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transform: translateY(10rem);
+}
+
+
+.blog-site .blog-container .blog-box .imagen .iconos a i {
+    padding-right: .5rem;
+    font-size: 1.5rem;
+    color: var(--color-play);
+}
+
+.blog-site .blog-container .blog-box .imagen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-site .blog-container .blog-box .contenido {
+    text-align: center;
+    padding: 2rem;
+}
+
+.blog-site .blog-container .blog-box .contenido h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.blog-site .blog-container .blog-box .contenido p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #aaa;
+    padding: 1.5rem 0;
+}
+
 
 /*Media query*/
 
@@ -610,6 +692,9 @@ h1{
         padding-right: 2rem;
     }
 
+    .blog-site .blog-container .blog-box .imagen .iconos a i{
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 540px) {
@@ -664,5 +749,7 @@ h1{
         margin-top: 6rem;
     }
 
-    
+    .blog-site .blog-container .blog-box .imagen .iconos a i{
+        font-size: 1.5rem;
+    }    
 }
