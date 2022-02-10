@@ -504,6 +504,30 @@ h1{
 .bottom a{
     margin: .5rem;
 }
+
+/*Service*/
+
+.box{
+    background: var(--color-play-dark);
+}
+
+.box i {
+    font-size: 5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.box h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+
 /*Media query*/
 
 @media (max-width: 1074px) {
