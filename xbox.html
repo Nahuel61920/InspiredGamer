@@ -5,13 +5,646 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Inspired Gamer</title>
 </head>
-<body>
-    <div class="heading">
-        <h1>Inspired Gamer</h1>
-    </div>
+<body class="body-xbox">
+    <header class="sitio-header">
 
+        <div id="menu-btn" class="fas fa-bars icono"></div>
+        <div id="search-btn" class="fas fa-search icono"></div>
+
+        <nav class="navbar">
+            <a href="#destacados">Destacados</a>
+            <a href="#juegos">Juegos</a>
+            <span class="espacio"></span>
+            <span class="espacio"></span>
+            <a href="#blog">Blog</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        
+        <a href="#" class="fas fa-shopping-cart icono"></a>
+        <a href="#" class="fas fa-user icono"></a>
+
+        <a href="index.html" class="logo">Inspired<span>Gamer</span></a>
+
+        <form action="" class="busqueda-form">
+            <input type="search" name="" placeholder="Buscar juego..." id=caja-busqueda">
+            <label for="#caja-busqueda" class="fas fa-search icono"></label>
+        </form>
+    </header>
+
+    
+    <main>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="./img/home-4.jpg" class="d-block w-100" alt="">
+            </div>
+    
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./img/home-5.jpg" class="d-block w-100" alt="...">
+            </div>
+    
+    
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./img/home-6.jpg" class="d-block w-100" alt="...">
+            </div>
+    
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div> 
+    
+        <section id="destacados" class="headline">
+            <div class="heading-text">
+                <h2> <span class="cruz">△</span>  Juegos destacados  <span class="circle">◯</span></h2>
+            </div>
+            <div class="swiper destacados-slider xbox-destacado">
+
+                <div class="swiper-wrapper">
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-2.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-3.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-4.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-5.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-6.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-7.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-8.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-9.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box">
+                        <div class="icons">
+                            <a href="#" class="fas fa-search"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </div>
+                        <div class="image">
+                            <img src="img/product-10.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Juego destacado</h3>
+                            <div class="price">$200.00 <span>$249.99</span></div>
+                            <a href="#" class="btn-two">añadir al carrito</a>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        
+            </div>
+
+        </section>
+
+        <article class="off-slider headline">
+            <div class="title-off">
+                <h2>Play Station 5</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora voluptates ex natus necessitatibus quia doloribus illum illo officiis? Impedit rerum rem ipsa vero dolore itaque reprehenderit unde, incidunt non iure!</p>
+                <a href="#" class="btn-two">Comprar ahora</a>
+            </div>
+            <div class="img-off">
+                <img src="img/play-off.jpg" alt="">
+            </div>
+        </article>
+
+
+        <section class="new-section" id="juegos">
+            <div class="heading-text">
+                <h2> <span class="cruz">△</span>  Juegos nuevos  <span class="circle">◯</span></h2>
+            </div>
+
+            <div class="swiper new-slider">
+
+                <div class="swiper-wrapper">
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/new-1.jpg" alt="" class="img-new">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos nuevos</h3>
+                            <div class="price-new">$300.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/new-2.jpg" alt="" class="img-new">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos nuevos</h3>
+                            <div class="price-new">$300.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/new-3.jpg" alt="" class="img-new">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos nuevos</h3>
+                            <div class="price-new">$300.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/new-4.jpg" alt="" class="img-new">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos nuevos</h3>
+                            <div class="price-new">$300.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/new-5.jpg" alt="" class="img-new">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos nuevos</h3>
+                            <div class="price-new">$300.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/new-6.jpg" alt="" class="img-new">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos nuevos</h3>
+                            <div class="price-new">$300.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/new-7.jpg" alt="" class="img-new">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos nuevos</h3>
+                            <div class="price-new">$300.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/new-8.jpg" alt="" class="img-new">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos nuevos</h3>
+                            <div class="price-new">$300.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        
+            </div>
+
+
+            <div class="heading-text">
+                <h2> <span class="cruz">△</span>  Juegos digitales  <span class="circle">◯</span></h2>
+            </div>
+
+            <div class="swiper new-slider">
+
+                <div class="swiper-wrapper">
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/dig-1.jpg" alt="" class="img-dig">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos digitales</h3>
+                            <div class="price-new">$250.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/dig-2.jpg" alt="" class="img-dig">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos digitales</h3>
+                            <div class="price-new">$250.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/dig-3.jpg" alt="" class="img-dig">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos digitales</h3>
+                            <div class="price-new">$250.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/dig-4.jpg" alt="" class="img-dig">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos digitales</h3>
+                            <div class="price-new">$250.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/dig-5.jpg" alt="" class="img-dig">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos digitales</h3>
+                            <div class="price-new">$250.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/dig-6.jpg" alt="" class="img-dig">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos digitales</h3>
+                            <div class="price-new">$250.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/dig-7.jpg" alt="" class="img-dig">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos digitales</h3>
+                            <div class="price-new">$250.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide box bg-white">
+                        
+                        <div class="image">
+                            <img src="img/dig-8.jpg" alt="" class="img-dig">
+                        </div>
+                        <div class="text-new">
+                            <h3>Juegos digitales</h3>
+                            <div class="price-new">$250.00 </div>
+                            <a href="#" class="btn-two">Ver mas</a>
+                        </div>
+                    </div>
+        
+                </div>
+        
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        
+            </div>
+        </section>
+
+        <article class="off-slider joy-off headline">
+            <div class="img-off">
+                <img src="img/joy-off.jpg" alt="">
+            </div>
+            <div class="title-off title-joy">
+                <h3>20% de descuento</h3>
+                <h2>Joystick PS5</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora voluptates ex natus necessitatibus quia doloribus illum illo officiis? Impedit rerum rem ipsa vero dolore itaque reprehenderit unde, incidunt non iure!</p>
+                <div class="bottom">
+                    <a href="#" class="btn-two">Comprar ahora</a>
+                    <a href="#" class="btn-one">Ver mas</a>
+                </div>
+            </div>
+        </article>
+
+        <section class="service-site">
+            <div class="heading-text">
+                <h2> <span class="cruz">△</span>  servicios  <span class="circle">◯</span></h2>
+            </div>
+            <div class="service-container row justify-content-center">
+                <div class="box col-5 col-md-3 text-center py-5 m-3">
+                    <i class="fas fa-truck icono"></i>
+                    <h3 class="my-4">Envios a todo el país</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate corrupti quo omnis repellat nisi assumenda laborum, enim ad tempore. Quam?</p>
+                </div>
+                <div class="box col-5 col-md-3 text-center py-5 m-3">
+                    <i class="fas fa-retweet icono"></i>
+                    <h3 class="my-4">10 días de cambios</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate corrupti quo omnis repellat nisi assumenda laborum, enim ad tempore. Quam?</p>
+                </div>
+                <div class="box col-5 col-md-3 text-center py-5 m-3">
+                    <i class="fas fa-headset icono"></i>
+                    <h3 class="my-4">Servicios 24/7</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate corrupti quo omnis repellat nisi assumenda laborum, enim ad tempore. Quam?</p>
+                </div>
+                <div class="box col-5 col-md-3 text-center py-5 m-3">
+                    <i class="fas fa-gamepad icono"></i>
+                    <h3 class="my-4">Los mejores juegos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate corrupti quo omnis repellat nisi assumenda laborum, enim ad tempore. Quam?</p>
+                </div>
+                <div class="box col-5 col-md-3 text-center py-5 m-3">
+                    <i class="fas fa-screwdriver icono"></i>
+                    <h3 class="my-4">Reparaciones con garantia</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate corrupti quo omnis repellat nisi assumenda laborum, enim ad tempore. Quam?</p>
+                </div>
+                <div class="box col-5 col-md-3 text-center py-5 m-3">
+                    <i class="fas fa-dollar-sign icono"></i>
+                    <h3 class="my-4">Los mejores precios</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate corrupti quo omnis repellat nisi assumenda laborum, enim ad tempore. Quam?</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-site mb-4" id="blog">
+            <div class="heading-text">
+                <h2> <span class="cruz">△</span>  Blogs  <span class="circle">◯</span></h2>
+            </div>
+            <div class="blog-container">
+                <div class="blog-box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="imagen">
+                        <img src="./img/blog-1.jpg" alt="blog">
+                        <div class="iconos">
+                            <a href="#"><i class="fas fa-calendar"> 13 de Dic. 2021</i></a>
+                            <a href="#"><i class="fas fa-user"> por: nuestro adm.</i></a>
+                        </div>
+                    </div>
+                    <div class="contenido">
+                        <h3>Los mejores juegos para tu PS5</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aspernatur modi nihil accusantium quidem quisquam tenetur voluptatem perferendis dolores dolor?</p>
+                        <a href="#" class="btn-two">Leer mas</a>
+                    </div>
+                </div>
+                <div class="blog-box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="imagen">
+                        <img src="./img/blog-2.jpg" alt="blog">
+                        <div class="iconos">
+                            <a href="#"><i class="fas fa-calendar"> 23 de Dic. 2021</i></a>
+                            <a href="#"><i class="fas fa-user"> por: nuestro adm.</i></a>
+                        </div>
+                    </div>
+                    <div class="contenido">
+                        <h3>Personalizar tu mando</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aspernatur modi nihil accusantium quidem quisquam tenetur voluptatem perferendis dolores dolor?</p>
+                        <a href="#" class="btn-two">Leer mas</a>
+                    </div>
+                </div>
+                <div class="blog-box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="imagen">
+                        <img src="./img/blog-3.jpg" alt="blog">
+                        <div class="iconos">
+                            <a href="#"><i class="fas fa-calendar"> 2 de Ene. 2022</i></a>
+                            <a href="#"><i class="fas fa-user"> por: nuestro adm.</i></a>
+                        </div>
+                    </div>
+                    <div class="contenido">
+                        <h3>Nuevas carcasas oara tu PS5</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aspernatur modi nihil accusantium quidem quisquam tenetur voluptatem perferendis dolores dolor?</p>
+                        <a href="#" class="btn-two">Leer mas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <article class="off-slider acc-off mt-5">
+            <div class="title-off">
+                <h3>5% de descuento</h3>
+                <h2>Paquete de accesorio PS5</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora voluptates ex natus necessitatibus quia </p>
+                <a href="#" class="btn-two">Comprar ahora</a>
+            </div>
+            <div class="img-off">
+                <img src="img/accesorios-off.jpg" alt="" >
+            </div>
+        </article>
+
+        <section class="contacto-site">
+            <div class="heading-text">
+                <h2> <span class="cruz">△</span>  Contactos  <span class="circle">◯</span></h2>
+            </div>
+            <div class="row contacto-container justify-content-center">
+                <div class="col-10 col-sm-5  p-2 ">
+                    <h2>Redes sociales</h2>
+                    <div class="iconos-red my-5">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-5 p-2 ">
+                    <h2>Contactos</h2>
+                    <div class="contact-inf my-3 text-center">
+                        <h3><i class="fas fa-phone"></i>  1234567890 / 123-456-789</h3>
+                        <h3><i class="fas fa-envelope"></i>  inspiredgamer@gmail.com</h3>
+                        <h3><i class="fas fa-map-marker-alt"></i>  San miguel 123</h3>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-10 p-5">
+                    <h2>Newsletter</h2>
+                    <form class="sub my-3 text-center">
+                        <input type="email" name="" placeholder="ingresar correo" id="" class="box">
+                        <input type="submit" value="subscribe" class="btn-two">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <nav class="navbar">
+            <a href="#destacados">Destacados</a>
+            <a href="#juegos">Juegos</a>
+            <span class="espacio"></span>
+            <span class="espacio"></span>
+            <a href="#blog">Blog</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="copyright text-center">
+            <h3>Pagina creada por <span>Nahuel61920</span>/Todos los derechos reservados</h3>
+        </div>
+    </footer>
+
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> 
+    <script src="js/main.js"></script>
     
 </body>
 </html>

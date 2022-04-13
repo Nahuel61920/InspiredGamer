@@ -37,6 +37,13 @@ body {
     background-size: cover;
 }
 
+.body-xbox {
+    background: url("https://fondosmil.com/fondo/55600.jpg");
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
 section {
     padding: 2rem 7%;
 }
@@ -113,9 +120,28 @@ h1 {
 }
 
 .btn-two:hover {
-    color: #fff;
     background: rgb(9, 136, 255);
 }
+
+.body-xbox .btn-two {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 1rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--color-xbox);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+}
+
+.body-xbox .btn-two:hover {
+    background: rgb(22, 104, 26);
+}
+
+
 
 .heading-text h2 {
     font-size: 3.5rem;
@@ -415,6 +441,31 @@ h1 {
 .destacados-slider .box .content .price span {
     font-size: 1.5rem;
     text-decoration: line-through;
+}
+
+
+.xbox-destacado .box .image {
+    padding: 1rem;
+    background: var(--color-xbox);
+}
+
+.xbox-destacado .box .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--blacK);
+    z-index: 1;
+    transform: translateY(-105%);
+}
+
+.xbox-destacado .box .icons a:hover {
+    color: var(--color-xbox);
+}
+
+.xbox-destacado .box .content {
+    background: var(--blacK);
+    padding: 1.5rem;
 }
 
 /*Off*/
