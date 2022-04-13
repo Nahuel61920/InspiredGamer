@@ -18,6 +18,7 @@
     --color-play: rgba(1, 112, 219, 1);
     --color-xbox: rgba(36, 151, 42, 1);
     --color-play-dark: rgba(0, 30, 100, 1);
+    --color-xbox-dark : rgb(2, 117, 26);
     --blacK: #000;
     --white: #fff;
     --hover-width: 75%;
@@ -124,23 +125,23 @@ h1 {
 }
 
 .body-xbox .btn-two {
-    margin-top: 1rem;
-    display: inline-block;
-    padding: .9rem 1rem;
-    border-radius: .5rem;
-    color: #fff;
     background: var(--color-xbox);
-    font-size: 1.7rem;
-    cursor: pointer;
-    font-weight: 500;
-    text-decoration: none;
-    text-align: center;
 }
 
 .body-xbox .btn-two:hover {
-    background: rgb(22, 104, 26);
+    color: var(--white);
+    background: rgba(1, 126, 0, 1);
 }
 
+.body-xbox .btn-one {
+    color: var(--white);
+    border: var(--white) solid 0.2rem;
+}
+
+.body-xbox .btn-one:hover {
+    background: white;
+    color: var(--blacK);
+}
 
 
 .heading-text h2 {
@@ -159,6 +160,18 @@ h1 {
 .circle {
     color: rgb(223, 23, 23);
     font-size: 3rem;
+    font-weight: 700;
+}
+
+.a {
+    color: var(--color-play);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.b {
+    color: rgb(223, 23, 23);
+    font-size: 4rem;
     font-weight: 700;
 }
 
@@ -290,8 +303,6 @@ h1 {
     text-decoration: none;
 }
 
-
-
 .sitio-header .navbar a:nth-last-child(1) {
     margin-right: 0;
 }
@@ -325,7 +336,6 @@ h1 {
     font-weight: 700;
     color: var(--color-play);
 }
-
 
 .sitio-header .logo img {
     width: 15rem;
@@ -372,6 +382,23 @@ h1 {
     margin-top: 5rem;
 }
 
+.body-xbox .sitio-header .logo span {
+    color: var(--color-xbox);
+}
+
+.body-xbox .sitio-header .icono:hover {
+    color: var(--color-xbox);
+}
+
+.body-xbox .sitio-header .navbar a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: var(--color-xbox);
+}
+
+.body-xbox .sitio-header .busqueda-form {
+    border-top: 0.2rem solid var(--color-xbox);
+}
 
 /**Destacados**/
 
@@ -501,6 +528,15 @@ h1 {
 .off-slider .img-off img {
     width: 100%;
 }
+.xbox-off-slider {
+    grid-template-columns: 50% 50%;
+    background-color: rgb(2, 117, 26);
+    color: #fff;
+}
+
+.xbox-off-slider .img-off img {
+    width: 80%;
+}
 
 /*New product*/
 
@@ -547,6 +583,14 @@ h1 {
     padding-top: .6rem;
 }
 
+.body-xbox .text-new {
+    background: var(--color-xbox-dark);
+}
+
+.body-xbox .swiper-wrapper .bg-black{
+    background: var(--blacK);
+}
+
 /*Joy off*/
 
 .joy-off {
@@ -564,6 +608,14 @@ h1 {
 
 .bottom a {
     margin: .5rem;
+}
+
+.body-xbox .joy-off {
+    background: rgb(2, 117, 26);
+}
+
+.body-xbox .joy-off .img-off img {
+    width: 58rem;
 }
 
 /*Service*/
@@ -586,6 +638,10 @@ h1 {
 .box p {
     font-size: 1rem;
     color: #fff;
+}
+
+.body-xbox .box {
+    background: var(--color-xbox-dark);
 }
 
 /*Blog*/
@@ -670,6 +726,14 @@ h1 {
     padding: 1.5rem 0;
 }
 
+.body-xbox .blog-site .blog-container .blog-box {
+    background: var(--color-xbox-dark);
+}
+
+.body-xbox .blog-site .blog-container .blog-box .imagen .iconos {
+    background: var(--color-xbox);
+}
+
 /*Accesorio off*/
 
 .acc-off .title-off h2 {
@@ -732,6 +796,11 @@ h1 {
     background: var(--white);
 }
 
+.body-xbox .contacto-container div {
+    background: var(--color-xbox-dark);
+    border-radius: 2rem;
+}
+
 /*Footer*/
 
 .site-footer{
@@ -768,6 +837,17 @@ h1 {
 
 .site-footer .copyright h3 span{
     color: var(--color-play);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.body-xbox .site-footer .navbar a:hover{
+    color: var(--color-xbox);
+    text-decoration: underline;
+}
+
+.body-xbox .site-footer .copyright h3 span{
+    color: var(--color-xbox);
     font-size: 1.8rem;
     font-weight: bold;
 }
