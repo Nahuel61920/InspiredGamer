@@ -38,7 +38,7 @@ body {
 }
 
 .body-xbox {
-    background: url("https://fondosmil.com/fondo/55600.jpg");
+    background: url(https://fondosmil.com/fondo/55600.jpg);
     background-attachment: fixed;
     overflow-x: hidden;
     background-size: cover;
