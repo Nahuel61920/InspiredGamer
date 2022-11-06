@@ -1,0 +1,86 @@
+.top-bar {
+    padding: 2rem 0;
+    background-image: url(../../../public/assets/nav-bg.jpg);
+
+    .ui.container {
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $font-light;
+
+            &:hover{
+                color: $font-blue;
+            }
+        }
+
+        i {
+            font-size: 1.5rem;
+            color: $font-light;
+            cursor: pointer;
+            transition: all .2s ease-in;
+
+            &:hover{
+                color: $font-blue;
+            }
+
+            &.active-times{
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+        }
+
+        .logo{
+            font-size: 2.6rem;
+            font-weight: 800;
+            transition: all .2s ease-in;
+            span {
+                color: $font-blue;
+            }
+
+            &:hover{
+                transform: scale(1.05);
+                color: $font-light;
+            }
+        }
+    }
+}
+
+.input {
+    
+    background-color: #000!important;
+    border-top: 0.2rem solid var(--color-play);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #000;
+    position: absolute!important;
+    top: 99%;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+
+    &.active{
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    input {
+        background-color: #000!important;
+        padding: 1rem 2rem!important;
+        color: $font-blue!important;
+    }
+
+    i {
+        font-size: 1.5rem!important;
+        color: $font-light;
+        cursor: pointer;
+    }
+}
