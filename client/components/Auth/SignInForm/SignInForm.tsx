@@ -3,6 +3,8 @@ import { Form, Button } from "semantic-ui-react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
+import {registerApi} from "../../../pages/api/user"
+
 export default function SignInForm(props: any) {
 
     const { showLoginForm } = props
@@ -11,6 +13,7 @@ export default function SignInForm(props: any) {
         initialValues: initialValues(),
         validationSchema: Yup.object(validationSchema()),
         onSubmit: (formData) => {
+            registerApi(formData)
             /* setLoading(true);
             const response = await registerApi(formData);
             if (response?.jwt) {
@@ -19,7 +22,6 @@ export default function SignInForm(props: any) {
                 toast.error("Error al registrar el usaurio, inténtelo mas tarde");
             }
             setLoading(false); */
-            console.log(formData);
         },
     });
 

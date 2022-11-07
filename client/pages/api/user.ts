@@ -1,0 +1,24 @@
+var baseUrl = process.env.BASE_PATH;
+
+
+export async function registerApi(formData: any) {
+    try {
+
+        console.log(baseUrl);
+        const url = `${baseUrl}/auth/local/register`;
+
+        const params = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        };
+        const response = await fetch(url, params);
+        const result = await response.json();
+        console.log(result);
+        return result;
+    } catch (error) {
+        return null;
+    }
+}
