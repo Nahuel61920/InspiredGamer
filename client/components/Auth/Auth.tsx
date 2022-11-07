@@ -18,5 +18,5 @@ export default function Auth(props: any) {
         setTitleModal("Sing-In")
     }
 
-    return showLogin ? <LoginFomr showSignInForm={showSignInForm}/> : <SignInForm showLoginForm={showLoginForm}/>
+    return showLogin ? <LoginFomr showSignInForm={showSignInForm} onCloseModal={onCloseModal}/> : <SignInForm showLoginForm={showLoginForm}/>
 }
