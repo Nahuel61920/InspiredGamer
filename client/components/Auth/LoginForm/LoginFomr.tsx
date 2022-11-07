@@ -3,12 +3,15 @@ import { Form, Button } from "semantic-ui-react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { toast } from 'react-toastify';
-
-import {loginApi} from "../../../pages/api/user"
+import useAuth from '../../../hooks/useAuth';
+import {loginApi, resetPasswordApi} from "../../../pages/api/user"
 
 export default function LoginFomr(props: any) {
     const [loading, setLoading] = useState(false)
-    const { showSignInForm, onCloseModal } = props
+    const { showSignInForm, onCloseModal } = props;
+    const {login, auth} = useAuth();
+
+    console.log(auth);
 
     const formik = useFormik({
         initialValues: initialValues(),
@@ -18,6 +21,7 @@ export default function LoginFomr(props: any) {
             const response = await loginApi(formData);
             if (response?.jwt) {
                 toast.success("successfully logged in");
+                login(response.jwt);
                 onCloseModal();
             } else {
                 toast.error("Email or password are incorrect");
@@ -25,6 +29,17 @@ export default function LoginFomr(props: any) {
             setLoading(false);
         },
     });
+
+    const resetPassword = () => {
+        formik.setErrors({});
+        const validateEmail = Yup.string().email().required();
+
+        if (!validateEmail.isValidSync(formik.values.identifier)) {
+            formik.setErrors({ identifier: "You must enter a valid email" });
+        } else {
+            resetPasswordApi(formik.values.identifier);
+        }
+    }
 
     return (
         <Form className="login-form" onSubmit={formik.handleSubmit}>
@@ -65,7 +80,7 @@ export default function LoginFomr(props: any) {
                     <Button className="submit" type="submit" loading={loading}>
                         Enter
                     </Button>
-                    <Button className="submit" type="button">
+                    <Button className="submit" type="button" onClick={resetPassword}>
                         Have you forgotten the password?
                     </Button>
                 </div>
