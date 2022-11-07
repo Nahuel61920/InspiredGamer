@@ -5,23 +5,27 @@ import * as Yup from 'yup';
 
 import {registerApi} from "../../../pages/api/user"
 
+import { toast } from 'react-toastify';
+
+
 export default function SignInForm(props: any) {
 
+    const [loading, setLoading] = useState(false);
     const { showLoginForm } = props
 
     const formik = useFormik({
         initialValues: initialValues(),
         validationSchema: Yup.object(validationSchema()),
-        onSubmit: (formData) => {
-            registerApi(formData)
-            /* setLoading(true);
+        onSubmit: async (formData) => {
+            setLoading(true);
             const response = await registerApi(formData);
             if (response?.jwt) {
+                toast.success("Successfully registered user");
                 showLoginForm();
             } else {
-                toast.error("Error al registrar el usaurio, inténtelo mas tarde");
+                toast.error("Error registering user, try again later");
             }
-            setLoading(false); */
+            setLoading(false);
         },
     });
 
@@ -120,7 +124,7 @@ export default function SignInForm(props: any) {
                 <Button type="button" basic onClick={showLoginForm}>
                     Login
                 </Button>
-                <Button className="submit" type="submit" >
+                <Button className="submit" type="submit" loading={loading}>
                     Enter
                 </Button>
             </div>
