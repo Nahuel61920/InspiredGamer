@@ -1,5 +1,5 @@
 const baseUrl = process.env.BASE_PATH;
-
+import { authFetch } from "../../utils/fetch";
 
 export async function registerApi(formData: any) {
     try {
@@ -58,6 +58,17 @@ export async function resetPasswordApi(email: string) {
         const response = await fetch(url, params);
         const result = await response.json();
         return result;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
+export async function getMeApi(logout: any) {
+    try {
+        const url = `${baseUrl}/users/me`;
+        const result = await authFetch(url, null, logout);
+        return result ? result : null;
     } catch (error) {
         console.log(error);
         return null;

@@ -1,16 +1,19 @@
 import React, {useState} from 'react'
-import { Grid, Input, Icon, Container } from 'semantic-ui-react';
+import { Grid, Input, Icon, Container, Button } from 'semantic-ui-react';
 
 import Link from 'next/link';
 import Image from 'next/image';
 
 import BasicModal from "../../Modal/BasicModal/BasicModal"
 import Auth from '../../Auth/Auth';
+import useAuth from '../../../hooks/useAuth';
 
 export default function TopBar() {
     const [ open , setOpen ] = useState(false);
     const [showModal, setShowModal] = useState(false)
     const [titleModal, setTitleModal] = useState("Login")
+    
+    const { auth, logout } = useAuth();
 
     const onShowModal = () => {
         setShowModal(true)
@@ -31,7 +34,13 @@ export default function TopBar() {
                     <Link href="#blog">Blog</Link>
                     <Link href="#contacto">Contacto</Link>
                     <Icon name="cart" />
-                    <Icon name="user" onClick={onShowModal} />
+                    {
+                        auth ? (
+                            <Button onClick={logout}>Cerrar sesión</Button>
+                        ) : (
+                            <Icon name="user" onClick={onShowModal} />
+                        )
+                    }
                 </Container>
             </div>
             <Input
