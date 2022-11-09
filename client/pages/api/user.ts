@@ -3,8 +3,6 @@ import { authFetch } from "../../utils/fetch";
 
 export async function registerApi(formData: any) {
     try {
-
-        console.log(baseUrl);
         const url = `${baseUrl}/auth/local/register`;
 
         const params = {
@@ -24,8 +22,6 @@ export async function registerApi(formData: any) {
 
 export async function loginApi(formData: any) {
     try {
-
-        console.log(baseUrl);
         const url = `${baseUrl}/auth/local`;
 
         const params = {
