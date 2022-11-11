@@ -1,0 +1,15 @@
+.account{
+    .account__configuration{
+        position: relative;
+        padding: 10px;
+
+        .title {
+            width: max-content;
+            background: $background-dark-absolute;
+            color: $font-light;
+            padding: 5px 10px;
+            border-radius: 5px, 5px, 0, 0;
+        }
+
+    }
+}
