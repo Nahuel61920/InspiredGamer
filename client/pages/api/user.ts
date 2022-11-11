@@ -70,3 +70,64 @@ export async function getMeApi(logout: any) {
         return null;
     }
 }
+
+export async function updateNameApi(idUser: string, data: any, logout: any) {
+    try {
+        const url = `${baseUrl}/users/${idUser}`;
+        const params = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        };
+        const result = await authFetch(url, params, logout);
+        return result ? result : null;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
+export async function updateEmailApi(idUser: string, email: string, logout: any) {
+    try {
+        const url = `${baseUrl}/users/${idUser}`;
+        const params = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: email }),
+        };
+        const result = await authFetch(url, params, logout);
+        return result ? result : null;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
+export async function updatePasswordApi(emailUser: string, idUser: string, currentPassword: string, newPassword: string, logout: any) {
+    // comprobamos si la contraseña actual es correcta
+    const result = await loginApi({ identifier: emailUser, password: currentPassword });
+    if (result.statusCode === 400) {
+        return result;
+    } else {
+        try {
+            const url = `${baseUrl}/users/${idUser}`;
+            const params = {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ password: newPassword }),
+            };
+            const result = await authFetch(url, params, logout);
+            return result ? result : null;
+        } catch (error) {
+            console.log(error);
+            return null;
+        }
+    }
+
+}

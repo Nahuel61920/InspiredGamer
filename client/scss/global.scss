@@ -20,3 +20,16 @@
         margin: 0;
     }
 }
+
+.change{
+    padding: 20px;
+
+    > h4 {
+        color: $primary;
+        font-size: 1.5rem;
+    }
+
+    > form {
+        margin-top: 20px;
+    }
+}

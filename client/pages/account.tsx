@@ -6,10 +6,12 @@ import { Grid, Icon, Button } from 'semantic-ui-react';
 import useAuth from '../hooks/useAuth';
 import { getMeApi } from '../pages/api/user';
 import ChangeNameForm from '../components/Account/ChangeNameForm/ChangeNameForm';
+import ChangeEmailForm from '../components/Account/ChangeEmailForm/ChangeEmailForm';
+import ChangePasswordForm from '../components/Account/ChangePasswordForm/ChangePasswordForm';
 
 export default function account() {
     const [user, setUser] = useState(undefined);
-    const { auth, logout } = useAuth();
+    const { auth, logout, setReloadUser } = useAuth();
     const router = useRouter();
 
     useEffect(() => {
@@ -28,19 +30,21 @@ export default function account() {
 
     return (
         <BasicLayout className='account'>
-            <Configuration user={user} logout={logout} />
+            <Configuration user={user} logout={logout} setReloadUser={setReloadUser} />
         </BasicLayout>
     )
 }
 
 function Configuration(props: any) {
-    const { user, logout } = props;
+    const { user, logout, setReloadUser } = props;
 
     return (
         <div className='account__configuration'>
             <div className='title'>Configuration</div>
             <div className='data'>
-                <ChangeNameForm user={user} logout={logout} />
+                <ChangeNameForm user={user} logout={logout} setReloadUser={setReloadUser} />
+                <ChangeEmailForm user={user} logout={logout} setReloadUser={setReloadUser} />
+                <ChangePasswordForm user={user} logout={logout}/>
             </div>
             <Button onClick={logout}>Logout</Button>
         </div>
