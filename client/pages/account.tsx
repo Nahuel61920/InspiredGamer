@@ -31,6 +31,7 @@ export default function account() {
     return (
         <BasicLayout className='account'>
             <Configuration user={user} logout={logout} setReloadUser={setReloadUser} />
+            <Address />
         </BasicLayout>
     )
 }
@@ -47,6 +48,14 @@ function Configuration(props: any) {
                 <ChangePasswordForm user={user} logout={logout}/>
             </div>
             <Button onClick={logout}>Logout</Button>
+        </div>
+    )
+}
+
+function Address() {
+    return (
+        <div>
+            <h1>Directions</h1>
         </div>
     )
 }
