@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import BasicLayout from '../layouts/BasicLayout/BasicLayout'
 import { useRouter } from 'next/router';
-import { Grid, Icon, Button } from 'semantic-ui-react';
+import { Icon, Button } from 'semantic-ui-react';
 
 import useAuth from '../hooks/useAuth';
 import { getMeApi } from '../pages/api/user';
@@ -9,6 +9,7 @@ import ChangeNameForm from '../components/Account/ChangeNameForm/ChangeNameForm'
 import ChangeEmailForm from '../components/Account/ChangeEmailForm/ChangeEmailForm';
 import ChangePasswordForm from '../components/Account/ChangePasswordForm/ChangePasswordForm';
 import BasicModal from '../components/Modal/BasicModal/BasicModal';
+import AddressForm from '../components/Account/AddressForm/AddressForm';
 
 export default function account() {
     const [user, setUser] = useState(undefined);
@@ -61,7 +62,7 @@ function Address() {
 
     const openModal = (title: string) => {
         setTitleModal(title)
-        setFormModal(<h2>New Address...</h2>)
+        setFormModal(<AddressForm/>)
         setShowModal(true)
     }
 
@@ -75,7 +76,7 @@ function Address() {
                 <p>Address list</p>
             </div>
             <BasicModal show={showModal} setShow={setShowModal} title={titleModal}>
-                <p>Form</p>
+                {formModal}
             </BasicModal>
         </div>
     )
