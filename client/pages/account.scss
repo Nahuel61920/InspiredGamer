@@ -1,5 +1,6 @@
 .account{
-    .account__configuration{
+    &__configuration,
+    &__addresses{
         position: relative;
         padding: 10px;
 
@@ -11,5 +12,15 @@
             border-radius: 5px, 5px, 0, 0;
         }
 
+    }
+
+    &__addresses{
+        .title {
+            i{
+                position: absolute;
+                right: 10px;
+                color: $font-dark;
+            }
+        }
     }
 }
