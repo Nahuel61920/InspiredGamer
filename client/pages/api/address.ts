@@ -49,3 +49,21 @@ export async function deleteAddressesApi(idAdreess: string, logout: any) {
         return null
     }
 }
+
+export async function updateAddressesApi(idAdreess: string, address: any, logout: any) {
+    try {
+        const url = `${baseUrl}/addresses/${idAdreess}`;
+        const params = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(address),
+        };
+        const result = await authFetch(url, params, logout);
+        return result;
+    } catch (error) {
+        console.log(error);
+        return null
+    }
+}

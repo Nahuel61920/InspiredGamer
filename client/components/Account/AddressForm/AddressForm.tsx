@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 import useAuth from '../../../hooks/useAuth';
-import { createAddressApi } from '../../../pages/api/address';
+import { createAddressApi, updateAddressesApi } from '../../../pages/api/address';
 import { toast } from 'react-toastify';
 
 export default function AddressForm(props: any) {
@@ -31,7 +31,7 @@ export default function AddressForm(props: any) {
         }
         const response = await createAddressApi(formDataTemp, logout)
         if (!response){
-            toast.warning("Error");
+            toast.warning("Error created address");
             setLoading(false);
         }else{
             formik.resetForm();
@@ -43,24 +43,24 @@ export default function AddressForm(props: any) {
     }
 
     const updateAddress = async (formData: any) => {
-        /* setLoading(true)
+        setLoading(true)
 
         const authID: any = auth
         const formDataTemp = {
             ...formData,
             users_permissions_user: authID.idUser,
         }
-        const response = await createAddressApi(formDataTemp, logout)
+        const response = await updateAddressesApi(address._id, formDataTemp, logout)
         if (!response){
-            toast.warning("Error");
+            toast.warning("Error updating address");
             setLoading(false);
         }else{
             formik.resetForm();
             setReloadAddresses(true)
             setLoading(false);
             setShowModal(false);
-            toast.success("Address created successfully")
-        } */
+            toast.success("Address updating successfully")
+        }
     }
     return (
         <Form onSubmit={formik.handleSubmit}>
