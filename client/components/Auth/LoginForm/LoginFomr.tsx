@@ -20,7 +20,7 @@ export default function LoginFomr(props: any) {
             setLoading(true)
             const response = await loginApi(formData);
             if (response?.jwt) {
-                toast.success("successfully logged in");
+                toast.success("essfully logged in");
                 login(response.jwt);
                 onCloseModal();
             } else {
