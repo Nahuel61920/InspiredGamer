@@ -5,6 +5,7 @@
 @import "../layouts/BasicLayout/BasicLayout.scss";
 
 // page 
+@import "../pages/index.scss";
 @import "../pages/account.scss";
 
 // components
@@ -15,4 +16,5 @@
 @import "../components/Auth/SignInForm/SignInForm.scss";
 @import "../components/Auth/LoginForm/LoginForm.scss";
 @import "../components/Account/AddressForm/AddressForm.scss";
-@import "../components/Account/ListAddress/ListAddress.scss"
+@import "../components/Account/ListAddress/ListAddress.scss";
+@import "../components/ListGames/ListGames.scss"
