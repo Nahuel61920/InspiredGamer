@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { size } from 'lodash';
 import BasicLayout from '../layouts/BasicLayout/BasicLayout';
-import {getLastGameApi} from "./api/game";
+import {getLastGamesApi} from "./api/game";
 import { Loader } from 'semantic-ui-react';
 import ListGames from '../components/ListGames/ListGames';
 
@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     (async () => {
-      const response = await getLastGameApi(30);
+      const response = await getLastGamesApi(30);
       if(size(response) > 0) setGames(response)
       else setGames(null)
     })()
