@@ -42,3 +42,15 @@ export async function getTotalGamesPlatformApi(platform: any) {
         return null
     }
 }
+
+export async function getGameByUrlApi(path: any) {
+    try {
+        const url = `${baseUrl}/games?url=${path}`;
+        const response = await fetch(url);
+        const result = await response.json();
+        return result[0];
+    } catch (error) {
+        console.log(error);
+        return null
+    }
+}

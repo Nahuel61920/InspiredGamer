@@ -1,3 +1,5 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import React, { useMemo, useState, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import {useRouter} from 'next/router';

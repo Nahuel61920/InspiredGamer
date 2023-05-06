@@ -18,14 +18,18 @@
     "formik": "^2.2.9",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
+    "moment": "^2.29.4",
     "next": "13.0.2",
     "query-string": "^8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-player": "^2.12.0",
+    "react-slick": "^0.29.0",
     "react-toastify": "^9.1.1",
     "sass": "^1.56.0",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.3",
+    "slick-carousel": "^1.8.1",
     "typescript": "4.8.4",
     "yup": "^0.32.11"
   }
