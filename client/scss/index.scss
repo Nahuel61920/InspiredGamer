@@ -4,9 +4,10 @@
 // layout
 @import "../layouts/BasicLayout/BasicLayout.scss";
 
-// page 
+// page
 @import "../pages/index.scss";
 @import "../pages/account.scss";
+@import "../pages/wishlist.scss";
 
 // components
 @import "../components/Header/Header.scss";
@@ -22,4 +23,4 @@
 @import "../components/Game/HeaderGame/HeaderGame.scss";
 @import "../components/Game/TabsGame/TabsGame.scss";
 @import "../components/Game/InfoGame/InfoGame.scss";
-@import "../components/Game/CarouselScreenshots/CarouselScreenshots.scss"
+@import "../components/Game/CarouselScreenshots/CarouselScreenshots.scss";

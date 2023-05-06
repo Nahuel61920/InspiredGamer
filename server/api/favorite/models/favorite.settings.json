@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favorites",
+  "info": {
+    "name": "favorite",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "game": {
+      "model": "game"
+    }
+  }
+}
