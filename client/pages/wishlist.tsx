@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Loader } from "semantic-ui-react";
 import BasicLayout from "../layouts/BasicLayout/BasicLayout";
 import { size, forEach } from "lodash";
 import useAuth from "../hooks/useAuth";
 import { getFavoriteApi } from "./api/favorite";
+import ListGames from "../components/ListGames/ListGames";
 
 export default function wishlist() {
   const [games, setGames] = useState(null);
@@ -10,9 +12,16 @@ export default function wishlist() {
 
   useEffect(() => {
     (async () => {
-      console.log(auth.idUser);
       const response = await getFavoriteApi(auth.idUser, logout);
-      setGames(response);
+      if (size(response) > 0) {
+        const gameList: any | [] = [];
+        forEach(response, (data) => {
+          gameList.push(data.game);
+        });
+        setGames(gameList);
+      } else {
+        setGames(null);
+      }
     })();
   }, []);
 
@@ -21,7 +30,13 @@ export default function wishlist() {
       <div className="wishlist__block">
         <div className="title">wishlist</div>
         <div className="data">
-          <p>ListGames</p>
+          {!games && <Loader active>You have no favorite games</Loader>}
+          {games && size(games) === 0 && (
+            <div className="data__not-found">
+              <h3>No game found</h3>
+            </div>
+          )}
+          {size(games) > 0 && <ListGames games={games} />}
         </div>
       </div>
     </BasicLayout>
