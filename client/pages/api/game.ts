@@ -54,3 +54,15 @@ export async function getGameByUrlApi(path: any) {
         return null
     }
 }
+
+export async function searchGameByUrlApi(title: string | any) {
+    try {
+        const url = `${baseUrl}/games?_q=${title}`;
+        const response = await fetch(url);
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.log(error);
+        return null
+    }
+}

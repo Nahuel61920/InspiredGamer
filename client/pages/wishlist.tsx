@@ -30,10 +30,10 @@ export default function wishlist() {
       <div className="wishlist__block">
         <div className="title">wishlist</div>
         <div className="data">
-          {!games && <Loader active>You have no favorite games</Loader>}
+          {!games && <Loader active>Loading favorites</Loader>}
           {games && size(games) === 0 && (
             <div className="data__not-found">
-              <h3>No game found</h3>
+              <h3>You have no favorite games</h3>
             </div>
           )}
           {size(games) > 0 && <ListGames games={games} />}
