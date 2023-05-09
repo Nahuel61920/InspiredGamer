@@ -75,9 +75,6 @@ export async function getFavoriteApi(
 ) {
   try {
     const url = `${baseUrl}/favorites?users_permissions_user=${idUser}`;
-    console.log(url);
-    console.log("user de favoritos", idUser);
-
     const result = await authFetch(url, null, logout);
     return result;
   } catch (error) {

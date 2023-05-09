@@ -42,7 +42,6 @@ export async function loginApi(formData: any) {
 
 export async function resetPasswordApi(email: string) {
     try {
-        console.log(email);
         const url = `${baseUrl}/auth/forgot-password`;
         const params = {
             method: "POST",
