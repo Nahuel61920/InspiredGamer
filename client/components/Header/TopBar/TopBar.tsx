@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Input, Icon, Container, Button } from "semantic-ui-react";
+import useCart from "../../../hooks/useCart";
+import {
+  Grid,
+  Input,
+  Icon,
+  Container,
+  Button,
+  Menu,
+  Label,
+} from "semantic-ui-react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -7,6 +16,7 @@ export default function TopBar() {
   const [open, setOpen] = useState(false);
   const [load, setLoad] = useState(false);
   const [searchStr, setSearchStr] = useState("" as any);
+  const { productsCart } = useCart();
 
   const router = useRouter();
 
@@ -34,7 +44,16 @@ export default function TopBar() {
           </Link>
           <Link href="#blog">Blog</Link>
           <Link href="#contacto">Contacto</Link>
-          <Icon name="cart" />
+          <Link href="/cart">
+            <Menu.Item as="a" className="m-0">
+              <Icon name="cart" />
+              {productsCart > 0 && (
+                <Label color="blue" circular>
+                  {productsCart}
+                </Label>
+              )}
+            </Menu.Item>
+          </Link>
         </Container>
       </div>
       <Input
