@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import BasicLayout from "../layouts/BasicLayout/BasicLayout";
 import { getGameByUrlApi } from "./api/game";
 import useCart from "../hooks/useCart";
+import SummaryCart from "../components/Cart/SummaryCart/SummaryCart";
+import AddressShipping from "../components/Cart/AddressShipping/AddressShipping";
 
 export default function cart() {
   const { getProductsCart } = useCart();
@@ -12,7 +14,7 @@ export default function cart() {
 function EmptyCart() {
   return (
     <BasicLayout className="empty-cart">
-      <div>There are no products in the cart</div>
+      <h2>There are no products in the cart</h2>
     </BasicLayout>
   );
 }
@@ -20,8 +22,8 @@ function EmptyCart() {
 function FullCart(props: any) {
   const { products } = props;
   const [productsData, setproductsData] = useState(null);
-
-  console.log(productsData);
+  const [reloadCart, setReloadCart] = useState(false);
+  const [address, setAddress] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -32,11 +34,17 @@ function FullCart(props: any) {
       }
       setproductsData(productsTemp);
     })();
-  }, []);
+    setReloadCart(false);
+  }, [reloadCart]);
 
   return (
     <BasicLayout className="empty-cart">
-      <div>Cart</div>
+      <SummaryCart
+        products={productsData}
+        reloadCart={reloadCart}
+        setReloadCart={setReloadCart}
+      />
+      <AddressShipping setAddress={setAddress} />
     </BasicLayout>
   );
 }

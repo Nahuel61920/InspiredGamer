@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { updateEmailApi } from "../../../pages/api/user";
 
 export default function ChangeEmailForm(props: any) {
-  const { user, logout, setRealoadUser } = props;
+  const { user, logout, setReloadUser } = props;
   const [loading, setLoading] = useState(false);
 
   const formik = useFormik({

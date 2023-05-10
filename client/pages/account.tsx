@@ -14,7 +14,7 @@ import ListAddress from "../components/Account/ListAddress/ListAddress";
 
 export default function account() {
   const [user, setUser] = useState(undefined);
-  const { auth, logout, setRealoadUser } = useAuth();
+  const { auth, logout, setReloadUser } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function account() {
       <Configuration
         user={user}
         logout={logout}
-        setRealoadUser={setRealoadUser}
+        setReloadUser={setReloadUser}
       />
       <Address />
     </BasicLayout>
@@ -44,7 +44,7 @@ export default function account() {
 }
 
 function Configuration(props: any) {
-  const { user, logout, setRealoadUser } = props;
+  const { user, logout, setReloadUser } = props;
 
   return (
     <div className="account__configuration">
@@ -53,12 +53,12 @@ function Configuration(props: any) {
         <ChangeNameForm
           user={user}
           logout={logout}
-          setRealoadUser={setRealoadUser}
+          setReloadUser={setReloadUser}
         />
         <ChangeEmailForm
           user={user}
           logout={logout}
-          setRealoadUser={setRealoadUser}
+          setReloadUser={setReloadUser}
         />
         <ChangePasswordForm user={user} logout={logout} />
       </div>

@@ -4,7 +4,7 @@ const CartContext = createContext({
     productsCart: 0,
     addProductCart: (reload: string) => null,
     getProductsCart: () => null,
-    removeProductCart: () => null,
+    removeProductCart: (reload: string) => null,
     removeAllProductsCart: () => null,
 })
 

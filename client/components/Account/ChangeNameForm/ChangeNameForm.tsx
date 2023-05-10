@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { updateNameApi } from "../../../pages/api/user";
 
 export default function ChangeNameForm(props: any) {
-  const { user, logout, setRealoadUser } = props;
+  const { user, logout, setReloadUser } = props;
   const [loading, setLoading] = useState(false);
 
   const formik = useFormik({
@@ -21,7 +21,7 @@ export default function ChangeNameForm(props: any) {
         toast.success("Name and lastname updated");
       }
       setLoading(false);
-      setRealoadUser(true);
+      setReloadUser(true);
     },
   });
 

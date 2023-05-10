@@ -5,7 +5,12 @@ import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import { setToken, getToken, removeToken } from "./api/token";
-import { getProductsCart, addProductCart, countProductsCart } from "./api/cart";
+import {
+  getProductsCart,
+  addProductCart,
+  countProductsCart,
+  removeProductCart,
+} from "./api/cart";
 import jwtDecode from "jwt-decode";
 import AuthContext from "../context/AuthContext";
 
@@ -16,9 +21,9 @@ import CartContext from "../context/CartContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [auth, setAuth] = useState({} as any);
-  const [realoadUser, setRealoadUser] = useState(false);
+  const [reloadUser, setReloadUser] = useState(false);
   const [totalProductsCars, setTotalProductsCars] = useState(0);
-  const [realoadCart, setRealoadCart] = useState(false);
+  const [reloadCart, setReloadCart] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -32,13 +37,13 @@ export default function App({ Component, pageProps }: AppProps) {
     } else {
       setAuth(null);
     }
-    setRealoadUser(false);
-  }, [realoadUser]);
+    setReloadUser(false);
+  }, [reloadUser]);
 
   useEffect(() => {
     setTotalProductsCars(countProductsCart);
-    setRealoadCart(false);
-  }, [realoadCart, auth]);
+    setReloadCart(false);
+  }, [reloadCart, auth]);
 
   const login = (token: string) => {
     setToken(token);
@@ -61,10 +66,15 @@ export default function App({ Component, pageProps }: AppProps) {
     const token = getToken();
     if (token) {
       addProductCart(urlProduct);
-      setRealoadCart(true);
+      setReloadCart(true);
     } else {
       toast.warning("To buy a game you have to start section");
     }
+  };
+
+  const removeProduct = (urlProduct: string) => {
+    removeProductCart(urlProduct);
+    setReloadCart(true);
   };
 
   const authData: any = useMemo(
@@ -72,7 +82,7 @@ export default function App({ Component, pageProps }: AppProps) {
       auth,
       login,
       logout,
-      setRealoadUser,
+      setReloadUser,
     }),
     [auth]
   );
@@ -82,7 +92,7 @@ export default function App({ Component, pageProps }: AppProps) {
       productsCart: totalProductsCars,
       addProductCart: (urlProduct: string) => addProduct(urlProduct),
       getProductsCart: getProductsCart,
-      removeProductCart: () => null,
+      removeProductCart: (urlProduct: string) => removeProduct(urlProduct),
       removeAllProductsCart: () => null,
     }),
     [totalProductsCars]

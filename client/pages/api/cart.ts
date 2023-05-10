@@ -1,4 +1,4 @@
-import { includes, size } from "lodash";
+import { includes, size, remove } from "lodash";
 import { toast } from "react-toastify";
 
 const CART = 'cart'
@@ -40,5 +40,19 @@ export const countProductsCart = () => {
         return 0;
     } else {
         return size(cart);
+    }
+}
+
+export const removeProductCart = (urlProduct: string) => {
+    const cart: any | [] = getProductsCart();
+
+    remove(cart, (item) => {
+        return item === urlProduct;
+    })
+
+    if (size(cart) > 0) {
+        localStorage.setItem(CART, cart)
+    } else {
+        localStorage.removeItem(CART)
     }
 }

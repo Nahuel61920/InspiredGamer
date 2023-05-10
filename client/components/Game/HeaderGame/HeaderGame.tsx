@@ -32,7 +32,7 @@ function Info(props: any) {
   const { title, summary, price, discount, url } = game;
 
   const [isFavorite, setIsFavorite] = useState(false);
-  const [reealoadFavorite, setRealoadFavorite] = useState(false);
+  const [reealoadFavorite, setReloadFavorite] = useState(false);
 
   const { auth, logout } = useAuth();
   const { addProductCart } = useCart();
@@ -44,20 +44,20 @@ function Info(props: any) {
       if (size(response) > 0) setIsFavorite(true);
       else setIsFavorite(false);
     })();
-    setRealoadFavorite(false);
+    setReloadFavorite(false);
   }, [game, reealoadFavorite]);
 
   const addFavorite = async () => {
     if (auth) {
       await addFavoriteApi(auth.idUser, game.id, logout);
-      setRealoadFavorite(true);
+      setReloadFavorite(true);
     }
   };
 
   const deleteFavorite = async () => {
     if (auth) {
       await deleteFavoriteApi(auth.idUser, game.id, logout);
-      setRealoadFavorite(true);
+      setReloadFavorite(true);
     }
   };
 
