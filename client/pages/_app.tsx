@@ -10,6 +10,7 @@ import {
   addProductCart,
   countProductsCart,
   removeProductCart,
+  removeAllProductsCart,
 } from "./api/cart";
 import jwtDecode from "jwt-decode";
 import AuthContext from "../context/AuthContext";
@@ -93,7 +94,7 @@ export default function App({ Component, pageProps }: AppProps) {
       addProductCart: (urlProduct: string) => addProduct(urlProduct),
       getProductsCart: getProductsCart,
       removeProductCart: (urlProduct: string) => removeProduct(urlProduct),
-      removeAllProductsCart: () => null,
+      removeAllProductsCart: removeAllProductsCart,
     }),
     [totalProductsCars]
   );

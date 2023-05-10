@@ -1,0 +1,55 @@
+.order {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  margin-bottom: 10px;
+  background-color: $background-light;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    a {
+      height: 100%;
+
+      .ui.image {
+        height: 100%;
+        margin-right: 20px;
+      }
+    }
+
+    &-data {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      h2 {
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__other {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 15px;
+
+    &-date {
+      margin: 0 10px;
+      width: 125px;
+      font-size: 12px;
+    }
+
+    i {
+      color: $primary;
+    }
+  }
+}

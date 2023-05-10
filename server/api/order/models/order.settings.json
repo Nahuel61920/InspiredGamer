@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "game": {
+      "model": "game"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "totalPayment": {
+      "type": "decimal",
+      "required": true
+    },
+    "idPayment": {
+      "type": "string"
+    },
+    "addressShipping": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

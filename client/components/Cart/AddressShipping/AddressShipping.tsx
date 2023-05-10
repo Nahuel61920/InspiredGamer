@@ -25,7 +25,7 @@ export default function AddressShipping(props: any | {}) {
       <div className="data">
         {size(addresses) === 0 ? (
           <h3>
-            no address created(" ")
+            no address created{" "}
             <Link href="/account">Add your first address</Link>
           </h3>
         ) : (
