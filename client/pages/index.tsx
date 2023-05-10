@@ -4,6 +4,7 @@ import BasicLayout from "../layouts/BasicLayout/BasicLayout";
 import { getLastGamesApi } from "./api/game";
 import { Loader } from "semantic-ui-react";
 import ListGames from "../components/ListGames/ListGames";
+import Seo from "../components/Seo";
 
 export default function Home() {
   const [games, setGames] = useState(null);

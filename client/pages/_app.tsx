@@ -19,6 +19,7 @@ import "../scss/global.scss";
 import "semantic-ui-css/semantic.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import CartContext from "../context/CartContext";
+import Seo from "../components/Seo";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [auth, setAuth] = useState({} as any);
@@ -105,6 +106,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <AuthContext.Provider value={authData}>
         <CartContext.Provider value={cartData}>
+          <Seo
+            title="InspiredGamer"
+            description="The best games at your fingertips"
+          />
           <Component {...pageProps} />
           <ToastContainer
             position="top-right"
