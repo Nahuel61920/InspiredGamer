@@ -31,7 +31,7 @@
     "template": "https://github.com/strapi/strapi-template-ecommerce"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": "16.14.2",
     "npm": "^6.0.0"
   },
   "license": "MIT"
